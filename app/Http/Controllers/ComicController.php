@@ -14,9 +14,9 @@ class ComicController extends Controller
         return view('comics.index', $data);
     }
 
-    /* public function show($id) {
+    public function show($id) {
         $comic = Comic::findOrFail($id);
         $data = ["comic" => $comic];
         return view('comics.show', $data);
-    } */
+    }
 }
