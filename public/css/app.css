@@ -36,3 +36,13 @@ form textarea {
   margin-bottom: 1rem;
 }
 
+nav ul {
+  display: flex;
+  gap: 1rem;
+  padding-left: 0;
+}
+
+nav ul li {
+  list-style-type: none;
+}
+
