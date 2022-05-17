@@ -4,7 +4,7 @@
 
 @section('content')
     <h1>Create Comics</h1>
-    <form action="{{ route('store') }}" method="post">
+    <form action="{{ route('comics.store') }}" method="post">
         @csrf
 
         <label for="title">Title</label>

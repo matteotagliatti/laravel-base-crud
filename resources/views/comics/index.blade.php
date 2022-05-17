@@ -7,7 +7,7 @@
     <div class="grid">
         @foreach ($comics as $comic)
             <div class="item">
-                <a href="{{ $comic->id }}">
+                <a href="comics/{{ $comic->id }}">
                     <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
                     <div class="info">
                         <h3>{{ $comic->title }} </h3>

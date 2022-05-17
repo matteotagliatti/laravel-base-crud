@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class ComicController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
         $comics = Comic::all();
@@ -14,7 +19,14 @@ class ComicController extends Controller
         return view('comics.index', $data);
     }
 
-    public function show($id) {
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
         $comic = Comic::findOrFail($id);
         $data = ["comic" => $comic];
         return view('comics.show', $data);
@@ -50,6 +62,6 @@ class ComicController extends Controller
         $newComic->type = $data['type'];
         $newComic->save();
 
-        return redirect()->route('show', $newComic->id);
+        return redirect()->route('comics.show', $newComic->id);
     }
 }

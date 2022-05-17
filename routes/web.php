@@ -13,5 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::resource('/', "ComicController");
-Route::get('/{id}', "ComicController@show");
+Route::get('/', "ComicController@index");
+Route::resource('comics', "ComicController");
